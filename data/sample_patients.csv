@@ -1,0 +1,11 @@
+age,bp,sg,al,su,bgr,bu,sc,sod,pot,hemo,pcv,wc,rc,rbc,pc,pcc,ba,htn,dm,cad,appet,pe,ane
+65,90,1.005,4,2,220,80,4.5,125,6.0,7.0,28,9000,2.8,abnormal,abnormal,present,notpresent,yes,yes,no,poor,yes,yes
+70,80,1.010,3,0,180,60,3.2,130,5.5,8.5,30,8500,3.0,abnormal,abnormal,present,notpresent,yes,yes,no,poor,yes,no
+55,70,1.015,2,0,150,40,2.0,135,4.8,10.0,35,7500,3.5,normal,abnormal,notpresent,notpresent,yes,no,no,poor,no,no
+48,80,1.020,1,0,120,30,1.2,138,4.5,12.0,40,7200,4.2,normal,normal,notpresent,notpresent,no,no,no,good,no,no
+30,70,1.020,0,0,90,15,0.8,140,4.2,14.0,44,7000,4.8,normal,normal,notpresent,notpresent,no,no,no,good,no,no
+25,65,1.025,0,0,85,12,0.7,142,4.0,15.0,46,6800,5.0,normal,normal,notpresent,notpresent,no,no,no,good,no,no
+60,100,1.005,5,3,250,100,6.0,120,7.0,6.0,22,12000,2.2,abnormal,abnormal,present,present,yes,yes,yes,poor,yes,yes
+72,90,1.005,4,1,200,75,5.0,128,6.5,7.5,26,10000,2.5,abnormal,abnormal,present,notpresent,yes,yes,no,poor,yes,yes
+40,75,1.015,1,0,100,22,1.0,139,4.3,13.5,42,7100,4.5,normal,normal,notpresent,notpresent,no,no,no,good,no,no
+35,68,1.020,0,0,88,14,0.9,141,4.1,15.5,47,6900,5.1,normal,normal,notpresent,notpresent,no,no,no,good,no,no
