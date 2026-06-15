@@ -9,6 +9,13 @@
 | **University** | University of Washington Bothell |
 | **Dataset** | UCI Chronic Kidney Disease (400 patients · 25 features) |
 
+[![CI](https://github.com/YOUR_USERNAME/ckd-predictor/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/ckd-predictor/actions)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/API-FastAPI-009688)](https://fastapi.tiangolo.com)
+[![Streamlit](https://img.shields.io/badge/dashboard-Streamlit-FF4B4B)](https://streamlit.io)
+[![MLflow](https://img.shields.io/badge/tracking-MLflow-0194E2)](https://mlflow.org)
+[![Tests](https://img.shields.io/badge/tests-57%20passing-brightgreen)]()
+
 
 ---
 
