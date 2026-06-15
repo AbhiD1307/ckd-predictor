@@ -22,7 +22,6 @@ import pandas as pd
 import shap
 from sklearn.pipeline import Pipeline
 
-from ckd.config import REPORTS_DIR
 
 logger = logging.getLogger(__name__)
 

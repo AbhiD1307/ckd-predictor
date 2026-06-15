@@ -100,7 +100,7 @@ class DriftReport:
     def summary(self) -> str:
         lines = [
             f"\n{'='*55}",
-            f"  Data Drift Report",
+            "  Data Drift Report",
             f"  Training samples : {self.n_train}",
             f"  Current samples  : {self.n_current}",
             f"  Overall PSI      : {self.overall_psi:.4f}",
@@ -113,7 +113,7 @@ class DriftReport:
             icon = "🔴" if fd.status == "high" else "🟠" if fd.status == "moderate" else "🟢"
             lines.append(f"  {fd.name:<18} {fd.psi:>8.4f}  {icon} {fd.status}")
         if self.prediction_drift:
-            lines.append(f"\n  Prediction Drift:")
+            lines.append("\n  Prediction Drift:")
             for k, v in self.prediction_drift.items():
                 lines.append(f"    {k}: {v}")
         lines.append("=" * 55)

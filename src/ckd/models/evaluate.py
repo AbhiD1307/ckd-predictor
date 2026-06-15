@@ -42,9 +42,9 @@ def compute_metrics(
     if hasattr(model, "predict_proba"):
         y_prob = model.predict_proba(X)[:, pos_label]
     else:
-        y_prob = model.decision_function(X)
+        y_prob = model.decision_function(X)  # type: ignore[assignment]
 
-    fpr, tpr, _ = roc_curve(y, y_pred, pos_label=pos_label)
+    fpr, tpr, _ = roc_curve(y, y_prob, pos_label=pos_label)
     roc_auc     = auc(fpr, tpr)
 
     return {

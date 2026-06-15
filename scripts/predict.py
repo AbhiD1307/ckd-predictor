@@ -171,7 +171,7 @@ def main() -> None:
 
     # Print summary table
     print("\n" + "=" * 55)
-    print(f"  Batch Prediction Summary")
+    print("  Batch Prediction Summary")
     print("=" * 55)
     print(f"  Total patients : {len(df_out)}")
     print(f"  CKD positive   : {n_ckd}  ({100*n_ckd/max(len(labels),1):.1f}%)")

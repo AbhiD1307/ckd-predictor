@@ -20,7 +20,6 @@ from ckd.config import (
     ALL_FEATURES,
     CATEGORICAL_FEATURES,
     MIXED_STR_FEATURES,
-    NUMERIC_FEATURES,
     RAW_CSV,
     TARGET_COL,
 )

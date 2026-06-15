@@ -4,10 +4,9 @@ from __future__ import annotations
 
 import numpy as np
 import pandas as pd
-import pytest
 
 from ckd.data.loader import clean, _clean_target, _clean_mixed_column
-from ckd.config import ALL_FEATURES, NUMERIC_FEATURES, CATEGORICAL_FEATURES
+from ckd.config import NUMERIC_FEATURES
 
 
 class TestCleanTarget:

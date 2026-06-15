@@ -87,7 +87,7 @@ def main() -> None:
     _art_path = (art_dir or _ART) / ARTIFACT_PIPELINE
     if _art_path.exists():
         artifact = _jl.load(_art_path)
-        vtag = registry_save(artifact, metrics, notes=f"run via scripts/train.py")
+        vtag = registry_save(artifact, metrics, notes="run via scripts/train.py")
         logger.info("Registered model version: %s", vtag)
 
     logger.info("-" * 60)
@@ -112,7 +112,6 @@ def main() -> None:
         art_dir  = args.artifacts or ARTIFACTS_DIR
         artifact = joblib.load(Path(art_dir) / ARTIFACT_PIPELINE)
         le       = artifact["label_encoder"]
-        feat_cols = artifact["feature_cols"]
 
         from sklearn.model_selection import train_test_split
         from ckd.config import RANDOM_STATE, TEST_SIZE

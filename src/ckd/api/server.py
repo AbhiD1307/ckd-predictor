@@ -29,14 +29,12 @@ import numpy as np
 import pandas as pd
 from fastapi import Depends, FastAPI, Header, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 from ckd.config import ARTIFACT_METRICS, ARTIFACT_PIPELINE, ARTIFACTS_DIR
-from ckd.data.validator import LenientPatientInput, validate_batch
+from ckd.data.validator import LenientPatientInput
 from ckd.db.database import get_recent, get_stats, init_db, log_prediction
 from ckd.explain.shap_explain import local_values
-from ckd.features.pipeline import get_feature_names
 
 logger = logging.getLogger(__name__)
 
@@ -237,7 +235,6 @@ def predict(
 ) -> PredictionResponse:
     t0       = time.perf_counter()
     artifact = get_artifact()
-    feat_cols = artifact["feature_cols"]
     label, prob_ckd, model_used, df_proc = _run_inference(
         patient.model_dump(), artifact, model
     )

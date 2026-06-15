@@ -43,7 +43,7 @@ from ckd.config import (
     XGB_PARAM_GRID,
 )
 from ckd.data.loader import load_clean
-from ckd.features.pipeline import build_preprocessor, get_feature_names
+from ckd.features.pipeline import build_preprocessor
 
 logger = logging.getLogger(__name__)
 

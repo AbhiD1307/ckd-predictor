@@ -23,26 +23,21 @@ _ROOT = Path(__file__).resolve().parents[3]
 if str(_ROOT / "src") not in sys.path:
     sys.path.insert(0, str(_ROOT / "src"))
 
-import joblib
-import matplotlib
+import joblib  # noqa: E402
+import matplotlib  # noqa: E402
 matplotlib.use("Agg")
-import matplotlib.patches as mpatches
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import streamlit as st
+import matplotlib.patches as mpatches  # noqa: E402
+import matplotlib.pyplot as plt  # noqa: E402
+import numpy as np  # noqa: E402
+import pandas as pd  # noqa: E402
+import streamlit as st  # noqa: E402
 
-from ckd.config import (
+from ckd.config import (  # noqa: E402
     ANTHROPIC_MODEL,
     ARTIFACT_METRICS,
     ARTIFACT_PIPELINE,
     ARTIFACTS_DIR,
-    CATEGORICAL_FEATURES,
-    CATEGORICAL_VALUES,
-    MIXED_STR_FEATURES,
-    NUMERIC_FEATURES,
     RAW_CSV,
-    RANDOM_STATE,
 )
 
 # ── Page config ────────────────────────────────────────────────────────────
@@ -115,7 +110,9 @@ def _risk_label(p: float) -> str:
 
 def _render_gauge(prob_ckd: float) -> plt.Figure:
     fig, ax = plt.subplots(figsize=(4, 2.4), subplot_kw={"aspect": "equal"})
-    ax.set_xlim(-1.4, 1.4); ax.set_ylim(-0.15, 1.4); ax.axis("off")
+    ax.set_xlim(-1.4, 1.4)
+    ax.set_ylim(-0.15, 1.4)
+    ax.axis("off")
     theta = np.linspace(np.pi, 0, 300)
     ax.plot(np.cos(theta), np.sin(theta), color="#e8e8e8", linewidth=20, solid_capstyle="round")
     fill = np.linspace(np.pi, np.pi - prob_ckd * np.pi, 300)
@@ -139,7 +136,8 @@ def _render_waterfall(shap_dict: dict[str, float]) -> plt.Figure:
     colors = ["#d62728" if v > 0 else "#1f77b4" for v in vals]
     fig, ax = plt.subplots(figsize=(8, 5))
     ax.barh(range(len(names)), vals, color=colors, edgecolor="white", height=0.65)
-    ax.set_yticks(range(len(names))); ax.set_yticklabels(names, fontsize=10)
+    ax.set_yticks(range(len(names)))
+    ax.set_yticklabels(names, fontsize=10)
     ax.axvline(0, color="#333", linewidth=0.8)
     ax.set_xlabel("SHAP value  (impact on CKD log-odds)")
     ax.set_title("Feature Impact — XGBoost SHAP", fontsize=12, fontweight="bold")
@@ -372,7 +370,6 @@ with tab_explore:
         st.dataframe(df_raw.head(10), use_container_width=True)
 
         st.markdown("#### Missing Values")
-        import seaborn as sns
         missing = df_raw.isnull().mean().sort_values(ascending=False)
         fig_mv, ax = plt.subplots(figsize=(10, 3))
         missing.plot(kind="bar", ax=ax, color="#4c78a8")
@@ -388,7 +385,8 @@ with tab_explore:
             counts = df_raw["classification"].str.strip().value_counts()
             fig_t, ax2 = plt.subplots(figsize=(4, 3))
             counts.plot(kind="bar", ax=ax2, color=["#d62728","#2ca02c"])
-            ax2.set_ylabel("Count"); ax2.set_title("CKD vs Not-CKD")
+            ax2.set_ylabel("Count")
+            ax2.set_title("CKD vs Not-CKD")
             plt.tight_layout()
             st.pyplot(fig_t, use_container_width=False)
             plt.close(fig_t)
@@ -417,7 +415,7 @@ with tab_about:
 | **Author** | Abhishek Ashok Deshmukh |
 | **Course** | CSS 581 – Machine Learning · UW Bothell |
 | **Dataset** | UCI Chronic Kidney Disease (400 patients, 25 features) |
-| **GitHub** | *(add your repo link here)* |
+| **GitHub** | [github.com/AbhiD1307/ckd-predictor](https://github.com/AbhiD1307/ckd-predictor) |
 
 ---
 
