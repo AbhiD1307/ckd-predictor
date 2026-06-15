@@ -9,7 +9,7 @@
 | **University** | University of Washington Bothell |
 | **Dataset** | UCI Chronic Kidney Disease (400 patients · 25 features) |
 
-[![CI](https://github.com/YOUR_USERNAME/ckd-predictor/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/ckd-predictor/actions)
+[![CI](https://github.com/AbhiD1307/ckd-predictor/actions/workflows/ci.yml/badge.svg)](https://github.com/AbhiD1307/ckd-predictor/actions)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/API-FastAPI-009688)](https://fastapi.tiangolo.com)
 [![Streamlit](https://img.shields.io/badge/dashboard-Streamlit-FF4B4B)](https://streamlit.io)
@@ -116,7 +116,7 @@ ckd-predictor/
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/YOUR_USERNAME/ckd-predictor.git
+git clone https://github.com/AbhiD1307/ckd-predictor.git
 cd ckd-predictor
 
 python -m venv .venv
